@@ -8,10 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <input type="time" id="startTime" required>
-        <input type="time" id="endTime" required>
-        <button id="startJourney">Start Journey</button>
-        <div id="progressBar"></div>
+        <div class="input-section">
+            <label for="startTime">Start Time</label>
+            <input type="time" id="startTime" name="startTime">
+            <label for="endTime">End Time</label>
+            <input type="time" id="endTime" name="endTime">
+            <button id="startButton">Start</button>
+        </div>
+        <div class="progress-section">
+            <div class="progress-bar">
+                <span class="house start">🏠</span>
+                <div class="car" id="car">🚗</div>
+                <span class="house end">🏠</span>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
