@@ -17,11 +17,19 @@ body {
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin: 10px 0 5px;
+    font-size: 1.2em;
 }
 
-input, button {
+input {
+    font-size: 1.5em;
     margin: 5px 0;
+}
+
+button#startButton {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-top: 10px;
 }
 
 .progress-bar {
@@ -29,13 +37,23 @@ input, button {
     height: 50px;
     background-color: #e0e0e0;
     position: relative;
-    display: flex;
-    align-items: center;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: green;
+    transition: width 0.5s;
 }
 
 .house {
     position: absolute;
     font-size: 30px;
+    z-index: 2;
 }
 
 .start {
@@ -48,6 +66,7 @@ input, button {
 
 .car {
     position: absolute;
-    transition: left 0.5s;
+    z-index: 3;
     font-size: 30px;
+    transition: left 0.5s;
 }
