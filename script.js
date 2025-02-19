@@ -15,6 +15,9 @@ document.getElementById('startButton').addEventListener('click', function() {
 
         let progress = (elapsedTime / totalDuration) * 100;
         document.getElementById('car').style.left = progress + '%';
+        
+        // Update the width of the green progress part
+        document.querySelector('.progress-bar::after').style.width = progress + '%';
 
         if (progress < 100) {
             requestAnimationFrame(updateProgress);
