@@ -1,23 +1,42 @@
 body {
     font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f0f0f0;
+    margin: 0;
+    padding: 20px; /* Adds space from the top of the page */
 }
 
 .container {
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+input[type="time"], button {
+    margin: 10px 0; /* Space between elements */
+    padding: 15px; /* Bigger buttons and inputs */
+    font-size: 18px; /* Larger text */
+    width: 200px; /* Uniform width for consistency */
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
 }
 
 #progressBar {
-    width: 300px;
-    height: 20px;
+    width: 100%; /* Full width of the container */
+    height: 60px; /* Three times taller than before */
     background-color: #ddd;
-    margin-top: 20px;
     border-radius: 10px;
     overflow: hidden;
+    margin-top: 20px; /* Space above the progress bar */
+    position: absolute; /* Position at the bottom */
+    bottom: 20px; /* Distance from the bottom of the viewport */
 }
 
 #progressBar div {
